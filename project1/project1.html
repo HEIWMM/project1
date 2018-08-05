@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<title>Css</title>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css\project1.css">
+<script type="text/javascript" src="js\jquery.js"></script>
+<script type="text/javascript" src="js\easing.js"></script>
+<style type="text/css">
+*
+{
+    padding:0px;
+    margin:0px;
+}
+ul li{
+    list-style: none;
+}
+html,body{
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 46px;
+    background-color: #222;
+}
+.container-s1{
+    height: 46px;
+    line-height: 46px;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.nav-left{
+    width: 221px;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+.main-ul{
+    height: 100%;
+    /*padding-left: 30px;*/
+}
+.main-ul li{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.main-ul li img{
+    width: 30px;
+    height: 30px;
+    vertical-align: -10px;
+}
+.main-ul .in-ul{ 
+    background-color: #999;
+}
+.main-ul .in-ul li{
+    padding-left: 43px;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+        <span class="container-s1">员工考勤管理系统</span>
+    </div>
+    <div class="nav-left">
+        <ul class="main-ul">
+            <li><img src="image/addressbook.png">个人中心</li>
+            <li><img src="image/card.png">打卡</li>
+            <li><img src="image/apply.png">假勤申请<b>></b></li>
+            <ul class="in-ul">
+                <li>请假申请</li>
+                <li>出差申请</li>
+                <li>申请进度</li>
+            </ul>
+            <li><img src="image/check.png">查看相应情况<b>></b></li>
+            <ul class="in-ul">
+                <li>打卡情况</li>
+                <li>请假情况</li>
+                <li>出差情况</li>
+            </ul>
+            <li><img src="image/sq.png">请假审核</li>
+            <li><img src="image/out.png">出差审核</li>
+        </ul>
+    </div>
+	
+<script type="text/javascript">
+    
+</script>
+</body>
+
+</html>
