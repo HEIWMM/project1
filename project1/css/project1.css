@@ -296,3 +296,170 @@ a{
     border: none;
     background-color: #FF5722;
 }
+.tag_appro {
+    margin-left: 200px;
+}
+.appro_head {
+    width: 900px;
+    border-bottom: solid 1px #CCCCCC;
+    padding-top: 2px;
+    padding-bottom: 7px;
+}
+        
+.appro_content {
+    width: 700px;
+    margin-top: 40px;
+    margin-left: 110px;
+            
+}
+#appro_table_head {
+    font-weight: bold;
+            
+}
+.appro_content table tr {
+    margin: 0px;
+}
+.appro_content table {
+    border: solid 1px #CCCCCC;
+}
+.appro_content table tr td {
+    padding: 5px 40px;
+    text-align: center;
+
+}
+.appro_table_2 {
+    background-color: #F9F9F9;
+}
+.appro_situation {
+            /*驳回
+            color: #E80000;*/
+            
+            /*同意
+            color: #009933;*/
+
+            /*未处理
+            color: #CC0099;*/
+}
+.appro_situation_oppose {
+    color: #E80000;
+}
+.appro_situation_agree {
+    color: #009933;
+}
+.appro_situation_wait {
+    color: #CC0099;
+}
+.appro_table_bottom {
+    margin-top: 10px;
+}
+.appro_table_bottom span {
+    padding: 0px 70px;
+}
+.ap_head {
+    width: 900px;
+    border-bottom: solid 1px #CCCCCC;
+    padding-top: 2px;
+    padding-bottom: 7px;
+        }
+.tag_cardstua {
+    margin-left: 200px;
+}
+        
+.stua_content {
+    width: 900px;
+    margin-top: 40px;
+    margin-left: 110px;
+            
+}
+#stua_table_head {
+    font-weight: bold;
+            
+}
+.stua_content table tr {
+    margin: 0px;
+}
+.stua_content table {
+        border: solid 1px #CCCCCC;
+}
+.stua_content table tr td {
+    padding: 5px 20px;
+    text-align: center;
+
+}
+.ap_table_2 {
+    background-color: #F9F9F9;
+}
+ .ap_situation {
+            /*驳回
+            color: #E80000;*/
+            
+            /*同意
+            color: #009933;*/
+
+            /*未处理
+            color: #CC0099;*/
+}
+.ap_situation_oppose {
+    color: #E80000;
+}
+.ap_situation_agree {
+    color: #009933;
+}
+.ap_situation_wait {
+    color: #CC0099;
+}
+.ap_table_bottom {
+    margin-top: 10px;
+}
+.ap_table_bottom span {
+    padding: 0px 70px;
+ }
+        /*迟到*/
+.be_late {
+    color: #CC0099;
+}
+        /*旷工*/
+.stay_away {
+    color: #E80000;
+}
+.tag_holistua {
+    margin-left: 200px;
+}
+.stua_hli_content {
+    width: 900px;
+    margin-top: 40px;
+    margin-left: 110px;
+            
+}
+#stua_table_head {
+    font-weight: bold;
+            
+}
+.stua_hli_content table tr {
+    margin: 0px;
+}
+.stua_hli_content table {
+    border: solid 1px #CCCCCC;
+}
+.stua_hli_content table tr td {
+    padding: 5px 12px;
+    text-align: center;
+
+}
+.tag_outstua {
+    margin-left: 200px;
+}
+.tag_holicheck {
+    margin-left: 200px;
+}
+.information_table {
+    border: solid 1px #CCCCCC;
+    width: 700px;
+    margin-top: 50px;
+}
+.information_table td {
+    cursor: pointer;
+}
+.tag_outcheck {
+    margin-left: 200px;
+}
