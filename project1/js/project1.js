@@ -11,10 +11,15 @@ function navLetf() {
 		$(c[i]).click(()=>{			
 			for(let j = 0;j<10;j++){
 				if (j==i) {
-					arr[i].css("display","block");
+					$(c[j]).css("font-weight","bold");
+					$(c[j]).css("background-color","#999");
+					arr[j].css("display","block");
 				}
 				else{
+					$(c[j]).css("font-weight","normal");
+					$(c[j]).css("background-color","#EEEEEE");
 					arr[j].css("display","none");
+
 				}
 				
 			};

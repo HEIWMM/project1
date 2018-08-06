@@ -37,7 +37,7 @@ a{
 .main-ul li{
     height: 40px;
     line-height: 40px;
-    font-weight: bold;
+    font-weight: ;
     padding-left: 15px;
     cursor: pointer;
 }
@@ -47,7 +47,7 @@ a{
     vertical-align: -10px;
 }
 .main-ul .in-ul{ 
-    background-color: #999;
+    background-color: ;
 }
 .main-ul .in-ul li{
     padding-left: 43px;
