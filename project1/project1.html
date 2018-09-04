@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Css</title>
+<title>员工考勤管理系统</title>
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css\project1.css">
@@ -41,16 +41,29 @@
                 
             </div>
             <div class="man-name">
-                <h3>xxxxx</h3>
+                <h3 class="person"></h3>
             </div>
             <div class="man-inf">
                 <table>
-                    <tr><td><b>员工编号：</b></td><td class="man-td1">xxx</td></tr>
-                    <tr><td><b>部门：</b></td><td class="man-td1">xxx</td></tr>
-                    <tr><td><b>性别：</b></td><td class="man-td1">xxx</td></tr>
-                    <tr><td><b>婚姻状况：</b></td><td class="man-td1">xxx</td></tr>
-                    <tr><td><b>联系电话：</b></td><td class="man-td1">xxx</td></tr>
-                    <tr><td><b>电子邮箱：</b></td><td class="man-td1">xxx</td></tr>
+                    <tr><td><b>员工编号：</b></td><td class="man-td1 person" ></td></tr>
+                    <tr><td><b>部门：</b></td><td class="man-td1">
+                        <select style="display: none;" class="bm">
+                            <option value="人力资源部">人力资源部</option>
+                            <option value="财务部">财务部</option>
+                            <option value="生产技术部">生产技术部</option>
+                            <option value="营销部">营销部</option>
+                            <option value="行政部">行政部</option>
+                        </select>
+                        <span style="display: inline-block;" class="bm person"></span>
+                    </td></tr>
+                    <tr><td><b>性别：</b></td><td class="man-td1 person">
+                        
+                    </td></tr>
+                    <tr><td><b>婚姻状况：</b></td><td class="man-td1 person" >
+                        
+                    </td></tr>
+                    <tr><td><b>联系电话：</b></td><td class="man-td1 person" ></td></tr>
+                    <tr><td><b>电子邮箱：</b></td><td class="man-td1 person" ></td></tr>
                 </table>
 
                 
@@ -61,11 +74,13 @@
             
         </div>
         <div class="tag-card" style="display: none;">
-            <h2>今天是：2018.8.8</h2>
+            <h2 class="card-timer"></h2>
             <hr>
             <div class="card-da">
                 <input type="submit" name="" value="上班打卡" class="card-d1">
+                <span class="da-kt"></span>
                 <input type="submit" name="" value="下班打卡" class="card-d2">
+                <span class="da-kt"></span>
             </div>
             <hr>
             <h2>打卡信息</h2>
@@ -107,29 +122,29 @@
                     <span>1/1页</span>
                     <span><a href="javascript:void(0)">下一页</a></span>
                 </div>
-            </div>        
+            </div>         
         </div>
         <div class="tag-apl" style="display: none;">
             <h2>申请</h2>
             <hr>
             <div class="apl-inf">
                 <ul class="apf-u1">
-                    <li>申请人：<span>admin</span></li>
-                    <li>员工编号：<span>05</span></li>
-                    <li>就职部门：<span>人力资源部</span></li>
+                    <li>申请人：<span class="person"></span></li>
+                    <li>员工编号：<span class="person"></span></li>
+                    <li>就职部门：<span class="person"></span></li>
                 </ul>
                 <ul class="apf-u2">
-                    <li style="margin-left: 150px;">开始时间：<input type="date" name="" class="apf-data"></li>
-                    <li>结束时间：<input type="date" name="" class="apf-data"></li>
-                    <li><input type="checkbox" name="">事假<input type="checkbox" name="">病假</li>
+                    <li style="margin-left: 150px;">开始时间：<input type="date" name="" class="apf-data" value=""></li>
+                    <li>结束时间：<input type="date" name="" class="apf-data" value=""></li>
+                    <li><input type="radio" name="thing" value="事假">事假<input type="radio" name="thing" value="病假">病假</li>
                 </ul>
                 <br>
                 <div class="apf-dcr">
                     <span>请假事由:</span>
-                    <textarea></textarea>
+                    <textarea value=""></textarea>
                 </div>
                 <div class="apf-sub">
-                    <input type="checkbox" name="">紧急事务，加速批准
+                    <input type="checkbox" name="" selected="">紧急事务，加速批准
                     <input type="submit" name="" value="提交">
                 </div>
             </div>
@@ -139,14 +154,14 @@
             <hr>
             <div class="out-inf">
                 <ul class="otf-u1">
-                    <li >申请人：<span>admin</span></li>
-                    <li>员工编号：<span>05</span></li>
-                    <li>就职部门：<span>人力资源部</span></li>
+                    <li >申请人：<span class="person"></span></li>
+                    <li>员工编号：<span class="person"></span></li>
+                    <li>就职部门：<span class="person">人力资源部</span></li>
                 </ul>
                 <ul class="otf-u2">
-                    <li style="margin-left: 150px;">出差地点：<input type="text" name="" class="otf-pla"></li>
-                    <li>开始时间：<input type="date" name="" class="otf-data"></li>
-                    <li>结束时间：<input type="date" name="" class="otf-data"></li>
+                    <li style="margin-left: 150px;">出差地点：<input type="text" name="" class="otf-pla" value=""></li>
+                    <li>开始时间：<input type="date" name="" class="otf-data" value=""></li>
+                    <li>结束时间：<input type="date" name="" class="otf-data" value=""></li>
                     
                 </ul>
                 <br>
@@ -155,7 +170,7 @@
                     <textarea></textarea>
                 </div>
                 <div class="otf-sub">
-                    <input type="checkbox" name="">紧急事务，加速批准
+                    <input type="checkbox" name="" selected="">紧急事务，加速批准
                     <input type="submit" name="" value="提交">
                 </div>
             </div>
@@ -420,26 +435,19 @@
                 <table class="information_table">
                     <tr>
                         <td>
-                    
                             <span>【紧急】</span>
                             <span>2</span>-
                             <span>admin</span>
                             <span>2018/04/12</span>
                             <span>北京请假出差</span>
-                    
-                    
                         </td>
                     </tr>
                     <tr class="ap_table_2">
                         <td>
-                    
-                    
                             <span>2</span>-
                             <span>admin</span>
                             <span>2018/04/12</span>
                             <span>北京请假出差</span>
-                    
-                    
                         </td>
                     </tr>
                 </table>

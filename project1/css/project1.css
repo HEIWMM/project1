@@ -157,7 +157,7 @@ a{
     text-align: center;
 
 }
-.main-right .tag-card .ap_table_2 {
+.ap_content tr:nth-child(even){
     background-color: #F9F9F9;
 }
 .main-right .tag-card .ap_situation_oppose {
