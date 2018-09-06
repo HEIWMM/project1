@@ -13,7 +13,8 @@ function navLetf() {
 				if (j==i) {
 					$(c[j]).css("font-weight","bold");
 					$(c[j]).css("background-color","#999");
-					arr[j].css("display","block");
+					//arr[j].css("display","block");
+					arr[j].show(1000);
 				}
 				else{
 					$(c[j]).css("font-weight","normal");
@@ -30,7 +31,7 @@ function ajax() {
     
 }
 function manChange() {
-	var [a,b,c,d,e,f,g] = [$(".man-cha"),$(".man-cha input"),$(".man-td1"),$(".man-td1 input"),$(".bm"),$(".bm option"),$(".person")];
+	var [a,b,c,d,e,f,g,h] = [$(".man-cha"),$(".man-cha input"),$(".man-td1"),$(".man-td1 input"),$(".bm"),$(".bm option"),$(".person"),$(".loadfile")];
 	var bool = true;
 	function click(x) {
 		if (x) {
@@ -40,6 +41,7 @@ function manChange() {
 			[c[4].innerHTML,c[5].innerHTML] = ["<input type='text' name='ifo' value='"+c[4].innerHTML+"'>","<input type='text' name='ifo'  value='"+c[5].innerHTML+"'>"];
 			e[0].style.display = "inline-block";
 			e[1].style.display = "none";
+			h[0].style.display = "block";
 		}
 		else{
 			b[0].value = "修改数据";
@@ -49,7 +51,9 @@ function manChange() {
 			[c[4].innerHTML,c[5].innerHTML] = [lc[0].value,lc[1].value];
 			e[1].style.display = "inline-block";
 			e[0].style.display = "none";
-			e[1].innerHTML = choose(la,f,1);			
+			e[1].innerHTML = choose(la,f,1);	
+			h[0].style.display = "none";
+
 		}
 		bool=!bool;
 	}
@@ -167,7 +171,52 @@ function qingjia() {
 		console.log(x[0].value,x[1].value,choose(t,null,0),a[0].value,n[0].checked);
 	}
 	n2[1].onclick=()=>{
-
+		$.post("date.php",{
+			"leaveApplication":{
+				"userName":p[7].innerText,
+	            "number":p[8].innerText,
+	            "department":p[9].innerText,
+	            "startTime0":x2[1].value,
+	            "endTime0":x2[2].value,
+	            "place":x2[0].value,
+	            "leaveReason":a2[0].value,
+	            "jinji":n[0].selected,
+	            "leaveApplicationBtn":"on"
+			}
+		},function(){});
+		console.log(x2[0].value,x2[1].value,x2[2].value,a2[0].value,n2[0].checked);
+	}
+	
+}
+function light() {
+	var a = $(".container-s1");
+	var n = true;
+	var timer = setInterval(()=>{
+		if (n) {
+			$(a[0]).slideDown(1500);
+		}
+		else{
+			$(a[0]).slideUp(1500);
+		}
+		n = !n;
+	},3000)
+}
+function loadimg() {
+	var input = document.getElementById("loadFile_wps");
+	var $img = $('#img');
+	input.addEventListener('change',readFile,false);
+	function readFile(){
+		//var file=this.files[0];
+		    //alert(file.name);return;
+		var $file = $(this);
+		var fileObj = $file[0];
+		var windowURL = window.URL || window.webkitURL;
+		var dataURL;
+		 
+		dataURL = windowURL.createObjectURL(fileObj.files[0]);
+		// alert(dataURL);return;
+		$img.attr('src',dataURL);
+		console.log(dataURL);
 	}
 }
 window.onload=function(){
@@ -187,10 +236,10 @@ window.onload=function(){
                 }
             });
 }
-
 navLetf();
 ajax();
 manChange();
 card();
 qingjia();
-console.log("assd");
+loadimg();
+light();
